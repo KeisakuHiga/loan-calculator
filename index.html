@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Interest Calculator</title>
+</head>
+<body>
+  <div class="container">
+    <h1>LOAN CALCULATOR</h1>
+    <h3>Please Select Repayment Type</h3>
+    <form>
+      <input type="radio" name="calculation-type" id="principal" checked> Principal Equal Repayment <br>
+      <input type="radio" name="calculation-type" id="principal-and-interest"> Principal And Interest Equal Repayment
+    </form>
+
+    <br>
+
+    <h3>Please Input Loan Conditions </h3>
+
+    <form action="#">
+      <label for="principal-amount">Principal Amount (AUD)</label>
+      <input type="number" name="principal-amount" min="100" step="any"><br><br>
+
+      <label for="loan-term">Loan Term (months)</label>
+      <input type="number" name="loan-term" min="1"><br><br>
+
+      <label for="interest-rate">Interest Rate (% p.a.)</label>
+      <input type="number" name="interest-rate" min="0"><br><br>
+
+      <button type="submit" class="btn btn-primary">Calculate</button>
+
+    </form>
+
+    <br>
+
+    <table align="center"  class="table" id='calculation-table'></table>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
